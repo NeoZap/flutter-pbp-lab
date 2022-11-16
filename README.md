@@ -89,22 +89,22 @@ void _decrementCounter() {
 `Navigator.push` akan menambah route baru pada stack `Navigator`, sedangkan `Navigator.pushReplacement` akan mengganti route paling atas (**top of stack**) pada stack `Navigator` dengan route baru.
 
 ## Widget yang digunakan beserta fungsinya
-    * `SingleChildScrollView`: Scrollable container yang hanya memiliki satu child.
-    * `ListView`: Scrollable container.
-    * `Drawer`: Membuat drawer (menu yang terletak di samping).
-    * `ListTile`: Container yang menampung elemen dengan struktur title, subtitle, dan trailing.
-    * `Form`: Container dari elemen-elemen form (seperti input).
-    * `TextFormField`: Input text.
-    * `DropdownButtonFormField`: Input dropdown.
-    * `TextButton`: Button berisi teks.
-    * `Align`: Mengatur posisi child widget.
-    * `Card`: Container dengan bentuk mirip seperti kartu.
+* `SingleChildScrollView`: Scrollable container yang hanya memiliki satu child.
+* `ListView`: Scrollable container.
+* `Drawer`: Membuat drawer (menu yang terletak di samping).
+* `ListTile`: Container yang menampung elemen dengan struktur title, subtitle, dan trailing.
+* `Form`: Container dari elemen-elemen form (seperti input).
+* `TextFormField`: Input text.
+* `DropdownButtonFormField`: Input dropdown.
+* `TextButton`: Button berisi teks.
+* `Align`: Mengatur posisi child widget.
+* `Card`: Container dengan bentuk mirip seperti kartu.
 
 ## Jenis event pada Flutter
-    * `onPressed`: Event yang terjadi ketika widget ditekan.
-    * `onChanged`: Event yang terjadi ketika nilai dari widget berubah.
-    * `onSubmitted`: Event yang terjadi ketika nilai dari widget dikirimkan.
-    * `onTap`: Event yang terjadi ketika widget ditekan.
+* `onPressed`: Event yang terjadi ketika widget ditekan.
+* `onChanged`: Event yang terjadi ketika nilai dari widget berubah.
+* `onSubmitted`: Event yang terjadi ketika nilai dari widget dikirimkan.
+* `onTap`: Event yang terjadi ketika widget ditekan.
 
 ## Cara kerja `Navigator` dalam mengganti halaman aplikasi
 `Navigator` adalah struktur data stack yang berisi route aplikasi. Halaman yang ditampilkan saat ini adalah route yang berada di **top of stack** (paling atas). Hal tersebut dapat dilakukan dengan menggunakan varian dari method `push`, dan `pop` yang ada.
