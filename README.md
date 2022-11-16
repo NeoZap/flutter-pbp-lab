@@ -86,7 +86,7 @@ void _decrementCounter() {
 # Tugas 8: Form
 ###### Aushaaf Fadhilah Azzah - 2106630063
 ## Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
-`Navigator.push` akan menambah route baru pada stack `Navigator`, sedangkan `Navigator.pushReplacement` akan mengganti route paling atas (**top of stack**) pada stack `Navigator` dengan route baru.
+`Navigator.push` akan menambah route baru pada stack `Navigator`, sedangkan `Navigator.pushReplacement` akan mengganti route paling atas (*top of stack*) pada stack `Navigator` dengan route baru.
 
 ## Widget yang digunakan beserta fungsinya
 * `SingleChildScrollView`: Scrollable container yang hanya memiliki satu child.
@@ -107,9 +107,9 @@ void _decrementCounter() {
 * `onTap`: Event yang terjadi ketika widget ditekan.
 
 ## Cara kerja `Navigator` dalam mengganti halaman aplikasi
-`Navigator` adalah struktur data stack yang berisi route aplikasi. Halaman yang ditampilkan saat ini adalah route yang berada di **top of stack** (paling atas). Hal tersebut dapat dilakukan dengan menggunakan varian dari method `push`, dan `pop` yang ada.
+`Navigator` adalah struktur data stack yang berisi route aplikasi. Halaman yang ditampilkan saat ini adalah route yang berada di *top of stack* (paling atas). Hal tersebut dapat dilakukan dengan menggunakan varian dari method `push`, dan `pop` yang ada.
 
-Ketika varian `push` digunakan, maka route baru akan menjadi **top of stack** dari stack `Navigator`, sehingga route tersebut akan ditampilkan. Sebaliknya, ketika varian `pop` digunakan, maka route yang berada di **top of stack** akan dihapus dari stack `Navigator`, sehingga route yang berada di bawahnya yang akan menjadi **top of stack** dan ditampilkan.
+Ketika varian `push` digunakan, maka route baru akan menjadi *top of stack* dari stack `Navigator`, sehingga route tersebut akan ditampilkan. Sebaliknya, ketika varian `pop` digunakan, maka route yang berada di *top of stack* akan dihapus dari stack `Navigator`, sehingga route yang berada di bawahnya yang akan menjadi *top of stack* dan ditampilkan.
 
 ## Implementasi
 1. Membuat drawer yang telah direfaktor menjadi beda file, yakni `drawer.dart`.
