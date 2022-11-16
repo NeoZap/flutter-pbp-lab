@@ -82,3 +82,38 @@ void _decrementCounter() {
     });
 }
 ```
+
+# Tugas 8: Form
+###### Aushaaf Fadhilah Azzah - 2106630063
+## Perbedaan `Navigator.push` dan `Navigator.pushReplacement`
+`Navigator.push` akan menambah route baru pada stack `Navigator`, sedangkan `Navigator.pushReplacement` akan mengganti route paling atas (**top of stack**) pada stack `Navigator` dengan route baru.
+
+## Widget yang digunakan beserta fungsinya
+    * `SingleChildScrollView`: Scrollable container yang hanya memiliki satu child.
+    * `ListView`: Scrollable container.
+    * `Drawer`: Membuat drawer (menu yang terletak di samping).
+    * `ListTile`: Container yang menampung elemen dengan struktur title, subtitle, dan trailing.
+    * `Form`: Container dari elemen-elemen form (seperti input).
+    * `TextFormField`: Input text.
+    * `DropdownButtonFormField`: Input dropdown.
+    * `TextButton`: Button berisi teks.
+    * `Align`: Mengatur posisi child widget.
+    * `Card`: Container dengan bentuk mirip seperti kartu.
+
+## Jenis event pada Flutter
+    * `onPressed`: Event yang terjadi ketika widget ditekan.
+    * `onChanged`: Event yang terjadi ketika nilai dari widget berubah.
+    * `onSubmitted`: Event yang terjadi ketika nilai dari widget dikirimkan.
+    * `onTap`: Event yang terjadi ketika widget ditekan.
+
+## Cara kerja `Navigator` dalam mengganti halaman aplikasi
+`Navigator` adalah struktur data stack yang berisi route aplikasi. Halaman yang ditampilkan saat ini adalah route yang berada di **top of stack** (paling atas). Hal tersebut dapat dilakukan dengan menggunakan varian dari method `push`, dan `pop` yang ada.
+
+Ketika varian `push` digunakan, maka route baru akan menjadi **top of stack** dari stack `Navigator`, sehingga route tersebut akan ditampilkan. Sebaliknya, ketika varian `pop` digunakan, maka route yang berada di **top of stack** akan dihapus dari stack `Navigator`, sehingga route yang berada di bawahnya yang akan menjadi **top of stack** dan ditampilkan.
+
+## Implementasi
+1. Membuat drawer yang telah direfaktor menjadi beda file, yakni `drawer.dart`.
+2. Menambahkan tiga route baru, yakni `Home`, `Form`, dan `Result` pada drawer tersebut dengan widget `ListTile` dengan event handler `onTap()` yang akan melakukan operasi `Navigator.push` ataupun `Navigator.pushReplacement`.
+3. Membuat form pada `budget_form.dart` dengan menggunakan widget `Form` yang berisi widget-widget form field seperti `TextFormField` dan `DropdownButtonFormField`.
+4. Membuat class `Budget` pada `models.dart` yang merepresentasikan data budget. Class tersebut memanfaatkan static list untuk mempermudah pengaksesan data.
+5. Menampilkan data budget pada `budget_data.dart` dengan memanfaatkan `ListView.builder` yang berisi widget `Card` sebagai container masing-masing data budget.
