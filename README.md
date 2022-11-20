@@ -117,3 +117,27 @@ Ketika varian `push` digunakan, maka route baru akan menjadi *top of stack* dari
 3. Membuat form pada `budget_form.dart` dengan menggunakan widget `Form` yang berisi widget-widget form field seperti `TextFormField` dan `DropdownButtonFormField`.
 4. Membuat class `Budget` pada `models.dart` yang merepresentasikan data budget. Class tersebut memanfaatkan static list untuk mempermudah pengaksesan data.
 5. Menampilkan data budget pada `budget_data.dart` dengan memanfaatkan `ListView.builder` yang berisi widget `Card` sebagai container masing-masing data budget.
+
+
+# Tugas 9: Integrasi Web Service
+###### Aushaaf Fadhilah Azzah - 2106630063
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan dengan menggunakan `jsonDecode()` dari `dart:convert`. Namun, hal tersebut tidak disarankan karena akan memakan waktu yang lama untuk melakukan parsing data JSON, dan akan memakan banyak memori.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+* `FutureBuilder`: Widget yang digunakan untuk menampilkan data yang akan diambil dari web service oleh `Future`.
+* `CheckboxListTile`: Widget yang menampilkan checkbox dengan title dan subtitle.
+* `InkWell`: Widget yang memiliki atribut event handler `onTap()`, juga memiliki efek ketika widget ditekan.
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+1. Fungsi yang mereturn class `Future` akan melakukan *fetch* data JSON dari web service secara *async*.
+2. Widget `FutureBuilder` dengan parameter `future` yang berisi fungsi tersebut akan menampilkan data yang telah di-*fetch*. Widget tersebut akan menampilkan widget lainnya sesuai dengan kondisi `future` yang ada, yakni `snapshot.hasData` saat future berisi data, `snapshot.hasError` saat future mendapati error, dan `snapshot.data == null` saat future tidak berisi data apapun (disini dimanfaatkan untuk menunjukkan bahwa data sedang di-*fetch* / masih *loading*).
+
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+1. Tambahkan navigasi baru pada drawer kepada aplikasi Watch List dengan bantuan widget `ListTile` dan event handler `onTap()` yang akan melakukan operasi `Navigator.pushReplacement`.
+2. Buat model `WatchList` dengan bantuan <a href="quicktype.com">website ini</a>.
+3. Membuat halaman yang menampilkan data Watch List dengan menggunakan widget `FutureBuilder` yang akan menampilkan data dari <a href="https://tugas-2-pbp-neozap.herokuapp.com/mywatchlist/json/">endpoint json tugas 3 PBP</a>.
+4. Membuat navigasi baru pada setiap film di halaman Watch List yang akan mengarah ke halaman detail film jika diklik dengan bantuan widget `ListTile` dan event handler `onTap()` yang akan melakukan operasi `Navigator.push`.
+5. Membuat halaman detail film dengan menggunakan widget `FutureBuilder` yang akan menampilkan detail dari watch list yang telah diklik, juga tombol untuk kembali pada halaman watch list dengan bantuan widget `TextButton` dan event handler `onPressed()` yang akan melakukan operasi `Navigator.pop`.
+6. Menambahkan checkbox dengan widget `CheckboxListTile` untuk menandakan apakah film tersebut sudah ditonton atau belum, dengan event handler `onChanged()` yang akan melakukan operasi `setState()` untuk mengubah nilai `watched` pada model `WatchList`.

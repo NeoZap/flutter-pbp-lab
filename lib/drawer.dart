@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:counter_7/main.dart';
 import 'package:counter_7/budget_form.dart';
 import 'package:counter_7/budget_data.dart';
-import 'package:counter_7/models.dart';
+import 'package:counter_7/model/budget.dart';
+import 'package:counter_7/watchlist_page.dart';
 
 class MyDrawer extends StatefulWidget {
   const MyDrawer({super.key});
@@ -42,7 +43,7 @@ class _MyDrawerState extends State<MyDrawer> {
           ListTile(
             title: Text('Tambah Budget'),
             onTap: () {
-              Navigator.push(
+              Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => const BudgetForm()),
               );
@@ -57,6 +58,15 @@ class _MyDrawerState extends State<MyDrawer> {
               );
             },
           ),
+          ListTile(
+            title: Text('Watch List'),
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const WatchListPage()),
+              );
+            },
+          )
         ],
       ),
     );
