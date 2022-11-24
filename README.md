@@ -123,7 +123,7 @@ Ketika varian `push` digunakan, maka route baru akan menjadi *top of stack* dari
 ###### Aushaaf Fadhilah Azzah - 2106630063
 
 ## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
-Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan dengan menggunakan `jsonDecode()` dari `dart:convert`. Namun, hal tersebut tidak disarankan karena akan memakan waktu yang lama untuk melakukan parsing data JSON, dan akan memakan banyak memori.
+Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan dengan menggunakan `jsonDecode()` dari `dart:convert` yang akan mengembalikan `Map<String, dynamic>`. Namun, hal tersebut tidak disarankan karena kita tidak dapat mengontrol tipe data dari setiap atribut yang ada pada JSON tersebut.
 
 ## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
 * `FutureBuilder`: Widget yang digunakan untuk menampilkan data yang akan diambil dari web service oleh `Future`.
