@@ -136,7 +136,7 @@ Pengambilan data JSON tanpa membuat model terlebih dahulu dapat dilakukan dengan
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 1. Tambahkan navigasi baru pada drawer kepada aplikasi Watch List dengan bantuan widget `ListTile` dan event handler `onTap()` yang akan melakukan operasi `Navigator.pushReplacement`.
-2. Buat model `WatchList` dengan bantuan <a href="quicktype.com">website ini</a>.
+2. Buat model `WatchList` dengan bantuan <a href="https://app.quicktype.io/">website ini</a>.
 3. Membuat halaman yang menampilkan data Watch List dengan menggunakan widget `FutureBuilder` yang akan menampilkan data dari <a href="https://tugas-2-pbp-neozap.herokuapp.com/mywatchlist/json/">endpoint json tugas 3 PBP</a>.
 4. Membuat navigasi baru pada setiap film di halaman Watch List yang akan mengarah ke halaman detail film jika diklik dengan bantuan widget `ListTile` dan event handler `onTap()` yang akan melakukan operasi `Navigator.push`.
 5. Membuat halaman detail film dengan menggunakan widget `FutureBuilder` yang akan menampilkan detail dari watch list yang telah diklik, juga tombol untuk kembali pada halaman watch list dengan bantuan widget `TextButton` dan event handler `onPressed()` yang akan melakukan operasi `Navigator.pop`.
